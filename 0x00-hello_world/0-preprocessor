@@ -1,1 +1,2 @@
-C
+#!/bin/bash
+gcc -E -o testfile $CFILE
