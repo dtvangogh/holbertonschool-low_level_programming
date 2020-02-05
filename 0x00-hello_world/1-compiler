@@ -1,1 +1,2 @@
-C 2 assembler
+#!/bin/bash
+gcc -c $CFILE
