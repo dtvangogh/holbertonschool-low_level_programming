@@ -10,9 +10,9 @@
 
 int main(void)
 {
-int c;
-for (c = 'a'; c <= 'z'; ++c)
-putchar(c);
+int lower;
+for (lower = 'a'; lower <= 'z'; ++lower)
+putchar(lower);
 putchar('\n');
 return (0);
 }
