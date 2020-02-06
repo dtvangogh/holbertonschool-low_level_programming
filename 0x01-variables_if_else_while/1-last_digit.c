@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
-*main-the main function
+*main - Main function
 *
-*return-Always 0
+*Return: 0 on Success
 */
 
 int main(void)
