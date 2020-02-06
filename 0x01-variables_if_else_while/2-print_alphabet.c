@@ -10,8 +10,9 @@
 
 int main(void)
 {
-char c;
+int c;
 for (c = 'a'; c <= 'z'; ++c)
-printf("%c ", c);
+putchar(c);
+putchar('\n');
 return (0);
 }
