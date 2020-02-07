@@ -11,7 +11,7 @@
 int main(void)
 {
 int lower;
-for (lower = 'z'; lower <= 'a'; ++lower)
+for (lower = 'z'; lower >= 'a'; lower--)
 putchar(lower);
 putchar('\n');
 return (0);
