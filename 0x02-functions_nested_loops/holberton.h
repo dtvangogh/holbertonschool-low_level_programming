@@ -1,8 +1,9 @@
-#ifndef _HOLBERTON.H
-#define _HOLBERTON.H 
+int add(int a, int b)
+{
+return(a+b);
+}
 
-int _putchar (char c)
+int _putchar(char c);
 
 
 
-#endif
