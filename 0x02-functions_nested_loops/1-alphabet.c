@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <unistd.h>
-#include <studio.h>
+#include <stdio.h>
 /**
 *main - print alphabet in lowercase
 *
