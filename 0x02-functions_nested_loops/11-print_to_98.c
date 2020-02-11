@@ -23,5 +23,5 @@ else if (n > 98)
 printf("%d, ", n);
 print_to_98(n - 1);
 }
-return (0);
+
 }
