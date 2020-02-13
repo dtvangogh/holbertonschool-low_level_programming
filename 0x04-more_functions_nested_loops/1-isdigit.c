@@ -4,6 +4,8 @@
 /**
 *_isdigit(int c)-finds if c is a digit
 *
+*Description: sees if numbers are digits
+*
 *Return: 1 if digit and 0 if else
 *
 *@c:a charactr
