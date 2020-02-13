@@ -8,13 +8,13 @@
 *
 *Return: 1 if digit and 0 if else
 *
-*@c:a charactr
+*@c:a character
 **/
 
 int _isdigit(int c)
 {
 	if (c == '0' || c <= '9')
-	return (1);
+		return (1);
 	else
-	return (0);
+		return (0);
 }
