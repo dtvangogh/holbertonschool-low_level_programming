@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
-*int mul(int a, int b);
+*mul - multiples two integers
 *
 *Description: multplies two integers
 *
-*Return: Always 0
+*Return: a*b
 *
 *@a: one intenger
 *
