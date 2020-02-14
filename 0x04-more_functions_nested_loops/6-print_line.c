@@ -3,12 +3,8 @@
 
 /**
 *print_line - print two lines
-*
 *Description: print lines
-*
 *@n: the length of the line
-*
-*Return: 0
 **/
 void print_line(int n)
 {
