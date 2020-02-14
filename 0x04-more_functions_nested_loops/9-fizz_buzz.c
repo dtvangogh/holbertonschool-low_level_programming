@@ -1,13 +1,13 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
-*main-prints numbers 1 - 100
+*main-fizz buzz translation
 *
 *Description - main prints 1-100 but multiples of 3 and 5 are changed
 *
-*return:0
-*
+*Return: always 0 (success)
 **/
 int main(void)
 {
