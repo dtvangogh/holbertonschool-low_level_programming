@@ -6,6 +6,7 @@
 *
 *Description: print lines
 *
+*@n: the length of the line
 *Return: 0
 *
 **/
