@@ -11,7 +11,7 @@ void puts2(char *str)
 int a;
 int stringlength = _strlen(str);
 
-	for (int a = 0; a < stringlength(str); a += 2)
+	for (a = 0; a < stringlength; a += 2)
 
 	_putchar(str[a]);
 	_putchar('\n');
@@ -24,7 +24,7 @@ int stringlength = _strlen(str);
 *@s: a string
 **/
 
-void _strlen(char *s)
+int _strlen(char *s)
 {
 
 	int stringlength;
