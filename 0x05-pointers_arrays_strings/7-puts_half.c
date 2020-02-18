@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+*puts_half - prints half the string
+*description - only prints last half of string
+*@str: a string
+**/
 
 void puts_half(char *str)
 {
