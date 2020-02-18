@@ -24,7 +24,7 @@ int stringlength = _strlen(str);
 *@s: a string
 **/
 
-int _strlen(char *s)
+void _strlen(char *s)
 {
 
 	int stringlength;
