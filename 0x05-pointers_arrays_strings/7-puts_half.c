@@ -3,13 +3,13 @@
 void puts_half(char *str)
 {
 
-int a; 
+int a;
 
 int stringlength = _strlen(str);
 
 	if (stringlength % 2 == 0)
 	{
-		for (a= stringlength  / 2; a < stringlength; a++)
+		for (a = stringlength  / 2; a < stringlength; a++)
 			_putchar(str[a]);
 	}
 	else
