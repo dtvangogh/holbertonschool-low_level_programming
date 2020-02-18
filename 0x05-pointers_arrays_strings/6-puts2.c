@@ -12,10 +12,10 @@ int a;
 int stringlength = _strlen(str);
 
 	for (int a = 0; a < stringlength(str); a += 2)
-	{
+	
 	_putchar(str[a]);
 	_putchar('\n');
-	}
+	
 }
 /**
 *_strlen - finds the length of a string
