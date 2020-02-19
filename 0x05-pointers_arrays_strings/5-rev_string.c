@@ -19,6 +19,7 @@ void rev_string(char *s)
 	}
 	for (i = 0; i < stringlength; i++)
 		s[i] = temp[i];
+}
 /**
 *_strlen - finds the length of a string
 *description - returns length of string
