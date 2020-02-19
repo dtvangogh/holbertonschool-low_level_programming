@@ -15,7 +15,7 @@ start = 0;
 
 	while (src[start] !=0)
 	{
-		dest[start] = src [start];
+		dest[start] = src[start];
 		start++;
 	}
 	dest[start] = src[start];
