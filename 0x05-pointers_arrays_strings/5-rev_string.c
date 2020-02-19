@@ -10,11 +10,11 @@ void rev_string(char *s)
 {
 int stringlength = _strlen(s);
 char temp;
-char * pStart = s;
-char * pEnd = pStart + stringlength - 1;
+char *pStart = s;
+char *pEnd = pStart + stringlength - 1;
 
 	while (pEnd > pStart)
-	{	
+	{
 
 	char temp = *pStart;
 	*pStart = *pEnd;
