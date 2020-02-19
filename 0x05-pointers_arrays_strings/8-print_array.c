@@ -14,9 +14,10 @@ int start;
 	for (start = 0; start < n; start++)
 	{
 		printf("%d", a[start]);
-		if (start < n)
+		if (start < n - 1)
 		{
 		printf(", ");
 		}
 	}
+	printf("\n");
 }
