@@ -17,9 +17,9 @@ unsigned int oleh;
 		oleh = 0;
 		while (accept[oleh] != '\0' && s[hello] != accept[oleh])
 			oleh++;
-	if (accept[oleh] == '\0')
+		if (accept[oleh] == '\0')
 		return (hello);
-	hello++;
+		hello++;
 	}
 
 	return (hello);
