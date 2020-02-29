@@ -7,7 +7,7 @@
 *Return: 0
 */
 
-int main(int argc, char **argv[])
+int main(int argc, char **argv)
 {
 	int number1 = atoi(argv[1]);
 	int number2 = atoi(argv[2]);
@@ -15,7 +15,6 @@ int main(int argc, char **argv[])
 
 	if (argc == 3)
 		printf("%d\n", product);
-
 	else
 	{
 		printf("Error\n");
