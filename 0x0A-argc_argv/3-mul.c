@@ -9,12 +9,20 @@
 
 int main(int argc, char **argv)
 {
-	int number1 = atoi(argv[1]);
-	int number2 = atoi(argv[2]);
-	int product = number1 * number2;
+	int number1;
+
+	int number2;
+
+	int product;
 
 	if (argc == 3)
+	{
+		number1 = atoi(argv[1]);
+		number2 = atoi(argv[2]);
+		product = number1 * number2;
+
 		printf("%d\n", product);
+	}
 	else
 	{
 		printf("Error\n");
