@@ -26,25 +26,19 @@ int main(int argc, char **argv)
 		printf("%d\n", 0);
 		return (0);
 	}
-	if (cents % 25 >= 0)
-	{
 		numberofcoins += cents / 25;
 		cents -= (numberofcoins * 25);
-	}
-	if (cents % 10 >= 0)
-	{
+
 		numberofcoins += cents / 10;
 		cents = cents % 10;
-	}
-	if (cents % 5 >= 0)
-	{
+
 		numberofcoins += cents / 5;
 		cents = cents % 5;
-	}
-	if (cents % 2 >= 0)
-	{
+
+		numberofcoins += cents / 2;
+		cents = cents % 2;
+
 		numberofcoins += cents;
-	}
 
 	printf("%d\n", numberofcoins);
 	return (0);
