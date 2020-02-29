@@ -10,30 +10,26 @@
 
 int main(int argc, char **argv)
 {
-	int numbers;
-
 	int sum;
 
 	int i;
 
 	if (argc == 0)
 		printf("%d\n", 0);
-	while (argc > 0 && argc--)
+	while (argc-- && argc > 0)
 	{
 		i = 0;
-		while (argv[argc][i] != '\0')
+		while (i != '\0')
 		{
 			i++;
-
-			if (!(isdigit(argv[argc][i])))
-			{
-				printf("Error\n");
-				return (1);
-			}
-
 		}
-		numbers = atoi(argv[argc]);
-		sum = sum + numbers;
+		if (!(isdigit(argv[argc][i])))
+		{
+			printf("Error\n");
+			return (1);
+		}
+
+		sum = sum + atoi(argv[argc]);
 	}
 	printf("%d\n", sum);
 	return (0);
