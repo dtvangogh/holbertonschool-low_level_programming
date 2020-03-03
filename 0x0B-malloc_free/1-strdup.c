@@ -1,4 +1,4 @@
-#include "holberton.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,20 +12,21 @@ char *_strdup(char *str)
 {
 	char *stringcopy;
 
-	unsigned int sizeofstring;
+	unsigned int size;
 	unsigned int sizeofnewstring;
 
-	sizeofstring = 0;
+	
 	if (str == NULL)
 		return (NULL);
-	while (str[sizeofstring] != '\0')
-		sizeofstring++;
+	size = 0; 
+	while (str[size] != '\0')
+		size++;
 
-		stringcopy = malloc(sizeof(char) * sizeofstring);
+	stringcopy = malloc(sizeof(char) * size);
 	if (stringcopy == NULL)
 		return (NULL);
 	sizeofnewstring = 0;
-	while (sizeofnewstring < sizeofstring)
+	while (sizeofnewstring < size)
 	{
 		stringcopy[sizeofnewstring] = str[sizeofnewstring];
 		sizeofnewstring++;
