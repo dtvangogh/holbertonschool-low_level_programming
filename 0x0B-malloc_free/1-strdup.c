@@ -25,7 +25,7 @@ char *_strdup(char *str)
 	if (stringcopy == NULL)
 		return (NULL);
 	sizeofnewstring = 0;
-	while (sizeofnewstring <= sizeofstring)
+	while (sizeofnewstring < sizeofstring)
 	{
 		stringcopy[sizeofnewstring] = str[sizeofnewstring];
 		sizeofnewstring++;
