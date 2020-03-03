@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	unsigned int size;
 	unsigned int sizeofnewstring;
 
-	
+
 	if (str == NULL)
 		return (NULL);
 	for (size = 0; str[size] != '\0'; size++)
