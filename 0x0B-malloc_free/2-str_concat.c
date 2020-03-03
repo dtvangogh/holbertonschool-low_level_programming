@@ -21,10 +21,10 @@ char *str_concat(char *s1, char *s2)
 	length2 = 0;
 
 	if (s1 != NULL)
-	{
-		for (length1 = 0; s1[length1] != 0; length1++)
-		;
-	}
+		while (s1[length1] != 0)
+		{
+			length1++;
+		}
 	if (s2 != NULL)
 		while (s2[length2] != 0)
 		{
