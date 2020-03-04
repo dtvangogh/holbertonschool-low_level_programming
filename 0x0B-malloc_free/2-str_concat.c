@@ -33,11 +33,18 @@ char *str_concat(char *s1, char *s2)
 
 	if (concat == NULL)
 		return (NULL);
-	for (i = 0; i < length1; i++)
+	i = 0;
+	while (i < length1)
+	{
 		concat[i] = s1[i];
-
-	for (i = 0; i < length2; i++)
+		i++;
+	}
+	i = 0; 
+	while (i < length2)
+	{
 		concat[i + length1] = s2[i];
+		i++;
+	}
 		concat[length1 + length2] = 0;
 	return (concat);
 }
