@@ -10,30 +10,30 @@
 
 char *argstostr(int ac, char **av)
 {
-	int sizedst, aindex, sindex, dstindex;
+	int sizedest, aindex, sindex;
 	char *dst;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (sizedst = 0, aindex = 0; aindex < ac; aindex++)
+	for (sizedest = 0, aindex = 0; aindex < ac; aindex++)
 		for (sindex = 0; av[aindex][sindex] != '\0'; sindex++) /**loop through sindex to find total size for dst string**/
-			sizedst++;
+			sizedest++;
 
-	dst = malloc(sizedst + ac + 1);
+	dst = malloc(sizedest + ac + 1);
 	if (dst == NULL)
 		return (NULL);
 
-	for (aindex = 0, dstindex = 0; aindex < ac; aindex++) 
+	for (aindex = 0, sizedest = 0; aindex < ac; aindex++) 
 	{
 		for (sindex = 0; av[aindex][sindex] != '\0'; sindex++)
 		{
-			dst[dstindex] = av[aindex][sindex]; /** put all arguments into dst string**/
-			dstindex++; /**increment each time a character is found**/
+			dst[sizedest] = av[aindex][sindex]; /** put all arguments into dst string**/
+			sizedest++; /**increment each time a character is found**/
 		}
-		dst[dstindex] = '\n'; /**add a new line for each word, put in ac loop**/
-		dstindex++;
+		dst[sizedest] = '\n'; /**add a new line for each word, put in ac loop**/
+		sizedest++;
 	}
-	dst[dstindex] = '\0';  /**add null bye**/
+	dst[sizedest] = '\0';  /**add null bye**/
 	return (dst);
 }
