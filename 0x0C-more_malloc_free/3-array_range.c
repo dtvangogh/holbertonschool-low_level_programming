@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * array_range - create anarray of integers (min to max)
+ * array_range - create anarray of integers
  * @min: min number to start
  * @max: max number to start
  * Return: pointer
