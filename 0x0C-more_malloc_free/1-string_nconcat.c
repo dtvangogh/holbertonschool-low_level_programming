@@ -3,9 +3,9 @@
 
 /**
  * string_nconcat - concatenates two strings
- * @s1:stirng 1
+ * @s1:string 1
  * @s2:string 2
- * @n: n bytesofstring 2
+ * @n: bytes of string  2 to concatenate
  * Return: pointer
  */
 
