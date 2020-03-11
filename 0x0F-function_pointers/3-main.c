@@ -9,14 +9,20 @@
   */
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int a, b, i;
 
 	if (argc != 4)
 		printf("Error\n"), exit(98);
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
+	for (i = 0; argv[2][i] != '\0'; i++)
+	{
+		if (i >= 1)
+			printf("Error\n"), exit(99);	
+	}
+
 	if ((argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
-	    && argv[2][0] != '/'  && argv[2][0] != '%') || get_op_func(argv[2]) == NULL)
+	    && argv[2][0] != '/'  && argv[2][0] != '%' && argv[2][0] != 'x') || get_op_func(argv[2]) == NULL)
 		printf("Error\n"), exit(99);
 	if (b == 0 && (*argv[2] == '/' || *argv[2] == '%'))
 		printf("Error\n"), exit(100);
