@@ -5,7 +5,7 @@
   * main - Main
   * @argc: count of arguments
   * @argv: pointer to array
-  * Return: 0 on success, 98 on incorrect arguments, 99 if no operator
+  * Return: 0 on success, 98 on incorrect arguments, 99 if no argv[2][0]
   */
 int main(int argc, char *argv[])
 {
@@ -15,7 +15,8 @@ int main(int argc, char *argv[])
 		printf("Error\n"), exit(98);
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	if (get_op_func(argv[2]) == NULL)
+	if ((argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
+	    && argv[2][0] != '/'  && argv[2][0] != '%') || get_op_func(argv[2]) == NULL)
 		printf("Error\n"), exit(99);
 	if (b == 0 && (*argv[2] == '/' || *argv[2] == '%'))
 		printf("Error\n"), exit(100);
