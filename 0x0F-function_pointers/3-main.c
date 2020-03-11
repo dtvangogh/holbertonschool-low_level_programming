@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 
 	if ((argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
-	    && argv[2][0] != '/'  && argv[2][0] != '%' && argv[2][0] != 'x') || get_op_func(argv[2]) == NULL)
+	    && argv[2][0] != '/'  && argv[2][0] != '%') || get_op_func(argv[2]) == NULL)
 		printf("Error\n"), exit(99);
 	if (b == 0 && (*argv[2] == '/' || *argv[2] == '%'))
 		printf("Error\n"), exit(100);
