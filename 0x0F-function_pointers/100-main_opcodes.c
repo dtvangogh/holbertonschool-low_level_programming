@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * hexastring - show out
- * @start: start of out
+ * hexastring - shows bytes in hexastring format
+ * @start: start of output
  * @n: number of bytes
  */
 
