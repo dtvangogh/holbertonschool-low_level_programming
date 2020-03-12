@@ -44,6 +44,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	hexastring((char *)&main, numberofbytes);
+	hexastring((char *)main, numberofbytes);
 	return (0);
 }
