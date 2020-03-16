@@ -1,18 +1,14 @@
-section .data
-    hello:     db 'Hello, Holberton'   ; 'Hello world!' plus a linefeed character
-    helloLen:  equ $-hello             ; Length of the 'Hello world!' string
+global    _start
 
-section .text
-	global _start
+          section   .text
+main:     mov       rax, 1                    ; system call for write
+          mov       rdi, 1                  ; file handle 1 is stdout
+          mov       rsi, message            ; address of string to output
+          mov       rdx, 13                 ; number of bytes
+          syscall                           ; invoke operating system to do the write
+          mov       rax, 60                 ; system call for exit
+          xor       rdi, rdi                ; exit code 0
+          syscall                           ; invoke operating system to exit
 
-main:
-	mov eax,4            ; The system call for write (sys_write)
-	mov ebx,1            ; File descriptor 1 - standard output
-	mov ecx,hello        ; Put the offset of hello in ecx
-	mov edx,helloLen     ; helloLen is a constant, so we don't need to say
-	                     ;  mov edx,[helloLen] to get it's actual value
-	int 80h              ; Call the kernel
-
-	mov eax,1            ; The system call for exit (sys_exit)
-	mov ebx,0            ; Exit with return code of 0 (no error)
-	int 80h;
+          section   .data
+message:  db        "Hello, Holberton", 16  ; note the newline at the end
