@@ -26,7 +26,6 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	/*create copy string because list_t cannot be played with*/
 	new->len = len; /*iterate thru length first */
 	new->str = copy;
 	new->next = *head;
