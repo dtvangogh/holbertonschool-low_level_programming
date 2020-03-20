@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
-* add_node - adds new node at the beginning
+*add_node - adds new node at the beginning
 *@str: the string added
 @head: the first string in list
 *Return: new list
@@ -14,7 +14,7 @@ list_t *add_node(list_t **head, const char *str)
 	char *dup = strdup(str);
 	list_t *temp;
 
-	while (str[counter] != '\0')
+	while (*dup[counter] != '\0')
 		++counter;
 	temp = *head;
 	temp = malloc(sizeof(list_t));
