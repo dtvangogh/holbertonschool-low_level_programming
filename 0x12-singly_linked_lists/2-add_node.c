@@ -8,6 +8,7 @@
 @head: the first string in list
 *Return: new list
 */
+list_t *add_node(list_t **head, const char *str)
 {
 	int len;
 	char *copy = strdup(str);
