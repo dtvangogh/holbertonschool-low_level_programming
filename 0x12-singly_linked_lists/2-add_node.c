@@ -11,7 +11,7 @@
 */
 list_t *add_node(list_t **head, const char *str)
 {
-	int i, len;
+	int len;
 	char *copy = strdup(str);
 	list_t *new;
 
