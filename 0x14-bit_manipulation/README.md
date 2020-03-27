@@ -10,21 +10,21 @@ The bitwise operators: ``^``, ``|``, ``&``, ``<<``, ``>>``, and ``~``
 * [Bit Masking Youtube](https://www.youtube.com/watch?v=lUzQtTLCglk) - Also check out the other videos in this series
 
 ## Description of Files
-<h5>0-binary_to_uint.c</h5>
+<h4>0-binary_to_uint.c</h4>
 Converts from binary to decimal
-<h5>1-print_binary.c</h5>
+<h4>1-print_binary.c</h4>
 Converts from decimal to binary
-<h5>2-get_bit.c</h5>
+<h4>2-get_bit.c</h4>
 Gets value of bit at a specified point
-<h5>3-set_bit.c</h5>
+<h4>3-set_bit.c</h4>
 Sets value of bit at a specified point
-<h5>4-clear_bit.c</h5>
+<h4>4-clear_bit.c</h4>
 Sets value of bit to 0 at a specified point
-<h5>5-flip_bits.c</h5>
+<h4>5-flip_bits.c</h4>
 Flips value of bit at a specified point
-<h5>100-get_endianness.c</h5>
+<h4>100-get_endianness.c</h4>
 Checks endianness of the CPU
-<h5>101-password</h5>
+<h4>101-password</h4>
 File that contains a password from crackme3
-<h5>crackme3</h5>
+<h4>crackme3</h4>
 Directory contains a crackme project.
