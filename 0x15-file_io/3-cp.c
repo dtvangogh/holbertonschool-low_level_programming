@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
+#define BUFFSIZE 1024
 
 /**
  * main - cps contents of one file to another
@@ -16,7 +17,7 @@ int main(int ac, char **av)
 	int from, to;
 	int original, copy;
 	original = copy = 1;
-	char buff[1024];
+	char buff[BUFFSIZE];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -28,7 +29,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	while (original)
 	{
-		original = read(from, buff, 1024);
+		original = read(from, buff, BUFFSIZE);
 		if (original == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		if (original > 0)
