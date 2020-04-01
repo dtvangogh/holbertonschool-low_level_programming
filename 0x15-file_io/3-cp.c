@@ -12,6 +12,7 @@ int main(int ac, char **av)
 	char buff[1024];
 	int from, to;
 	int original, copy;
+
 	original = copy = 1;
 
 	if (ac != 3)
