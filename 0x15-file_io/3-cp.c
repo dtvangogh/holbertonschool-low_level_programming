@@ -1,5 +1,4 @@
 #include "holberton.h"
-#define BUFFSIZE 1204
 
 /**
  * main - copy file to another(create new file too)
