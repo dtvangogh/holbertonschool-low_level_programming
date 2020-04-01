@@ -1,19 +1,22 @@
 #include "holberton.h"
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
 
 /**
- * main - copy file to another(create new file too)
- * @ac: arg count
- * @av: arg list: from and to file
+ * main - cps contents of one file to another
+ * @ac: arguement count
+ * @av: arguement list: file names
  * Return: 0;
  */
 
 int main(int ac, char **av)
 {
 	int from, to;
-
-	from = to = 1;
-
-	char buffer[1024];
+	int original, copy;
+	original = copy = 1;
+	char buff[1024];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -23,23 +26,23 @@ int main(int ac, char **av)
 	to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	while (from)
+	while (original)
 	{
-		from = read(from, buffer, 1024);
-		if (from == -1)
+		original = read(from, buff, 1024);
+		if (original == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-		if (from > 0)
+		if (original > 0)
 		{
-			to = write(to, buffer, from);
-			if (to == -1)
+			copy = write(to, buff, original);
+			if (copy == -1)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
 	}
-	to = close(from);
-	if (to == -1)
+	copy = close(from);
+	if (copy == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close from %d\n", from), exit(100);
-	to = close(to);
-	if (to == -1)
+	copy = close(to);
+	if (copy == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close from %d\n", to), exit(100);
 	return (0);
 }
