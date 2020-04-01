@@ -10,7 +10,9 @@
 int main(int ac, char **av)
 {
 	int from, to;
+
 	from = to = 1;
+
 	char buffer[1024];
 
 	if (ac != 3)
