@@ -1,4 +1,5 @@
 #include "holberton.h"
+#define BUFFSIZE 1204
 
 /**
  * main - copy file to another(create new file too)
@@ -11,7 +12,7 @@ int main(int ac, char **av)
 {
 	int from, to;
 	from = to = 1;
-	char buff[BUFFSIZE];
+	char buffer[1024];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -23,12 +24,12 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	while (from)
 	{
-		from = read(from, buff, BUFFSIZE);
+		from = read(from, buffer, 1024);
 		if (from == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		if (from > 0)
 		{
-			to = write(to, buff, from);
+			to = write(to, buffer, from);
 			if (to == -1)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
